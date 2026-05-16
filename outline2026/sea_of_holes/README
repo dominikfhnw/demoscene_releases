@@ -1,0 +1,31 @@
+Sea of Holes
+64b executable graphics for Linux
+by dominikr ^ dSr
+Released at Outline 2026
+------------------------
+
+transmission from a far away world
+
+first 64b prod for linux featuring framebuffer graphics
+
+
+
+This is very much at the limit of what is possible.
+32b header, 20b for opening the framebuffer. No space to
+actually memory map the framebuffer into RAM.
+Just an interference pattern being bruteforced into VRAM
+
+
+Recommended resolution is 1280x720. It will work in
+1920x1080, but you might encounter repeating patterns
+instead of the expected image if ASLR decides to put
+your stack too high up in memory.
+The included screenshot is 1280x720, upscaled to 1080p,
+in accordance with Outline rules.
+
+
+Needs framebuffer permissions for the current user.
+Add them with "sudo usermod -a -G video $(whoami)".
+Then switch to the console with Ctrl-Alt-F2, log in,
+and run it.
+Exit the standard unix way with Ctrl-C.
