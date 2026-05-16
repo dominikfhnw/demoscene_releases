@@ -1,0 +1,35 @@
+attraction & decay
+256b intro for Linux
+by dominikr ^ dSr
+Released@Outline 2026
+---------------------
+
+a short story in 256 bytes of code
+Intro for Linux/x86. 1920x1080@60FPS
+
+
+The party version has double buffering and a real
+timer to limit FPS to 60, and the header is *not*
+counted towards the size, in accordance with the
+Outline party rules.
+The small version has no double buffering, and a
+sleep for 16ms limits the frames to a *max* of 60
+fps. Header/data/code are heavily intertwined.
+You need a faster machine than my 10yo laptop to
+run it halfway smoothly. It fits in 256b, though.
+
+
+Needs framebuffer permissions for the current user.
+Add them with "sudo usermod -a -G video $(whoami)".
+Then switch to the console with Ctrl-Alt-F2, log in,
+and run it.
+Exit the standard unix way with Ctrl-C.
+
+
+Greetings:
+This intro is dedicated to Koe.
+Without you, all of this wouldn't have been possible.
+
+HellMood, Kuemmel, RamonB5, Brian Raiter, Trixter,
+Scali, mikerofone, baze, iq, ryg and all those I forgot
+
